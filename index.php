@@ -7,11 +7,15 @@
   <body>
     <p>
 <?php
-  echo $_GET['building'];
+/*Vérification des paramètres de l'url*/
+  if(isset($_GET['building']) && isset($_GET['room'])){
+    /*Affichage des paramètres vérifiés*/
+    echo $_GET['building']
 ?>
 <br />
 <?php
-  echo $_GET['room'];
+    echo $_GET['room'];
+  }
 ?>
     </p>
   </body>
