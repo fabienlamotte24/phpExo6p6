@@ -7,14 +7,22 @@
   <body>
     <p>
 <?php
-/*Vérification des paramètres de l'url*/
-  if(isset($_GET['building']) && isset($_GET['room'])){
-    /*Affichage des paramètres vérifiés*/
-    echo $_GET['building']
-?>
+  //Vérification du paramètre building de l'url
+  if(!empty($_GET['building'])){
+      echo $_GET['building'];
+  } //Affichage des paramètres vérifiés
+    else {
+      echo 'Le paramètre building est manquant';
+  }
+  ?>
 <br />
 <?php
-    echo $_GET['room'];
+//Vérification du paramètre room de l'url
+if(!empty($_GET['room'])){
+      echo $_GET['room'];
+  } //Affichage des paramètres vérifiés
+    else {
+      echo 'Le paramètre room est manquant';
   }
 ?>
     </p>
